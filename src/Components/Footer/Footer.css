@@ -1,0 +1,41 @@
+.footer {
+    font-size: 0.9rem;
+    color: #666;
+    border-top: 1px solid #ccc;
+  }
+  
+.footer h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    /* color: #333; */
+  }
+  
+.footer ul li a {
+    color: #666;
+    text-decoration: none;
+  }
+.footer ul li a.links:hover {
+    color: #fffbfb !important;
+  }
+  
+  
+.footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+.footer input[type="email"] {
+    width: 70%;
+    max-width: 300px;
+  }
+.customer{
+    padding-left: 50px;
+}  
+  @media (min-width: 768px) {
+    .footer .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  
+}

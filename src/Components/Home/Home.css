@@ -1,0 +1,21 @@
+.home-discription{
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    margin-top: 40px;
+}
+h1.title-heading{
+    font-family: 'Times New Roman', Times, Helvetica, sans-serif !important;
+    font-size: 45px;
+}
+.home-description{
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+.text-description{
+    font-family: 'Times New Roman', Times, Helvetica, sans-serif !important;
+    font-size: 17px;
+    padding-left: 35px;
+    color: gray;
+}
