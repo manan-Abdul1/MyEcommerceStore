@@ -17,7 +17,7 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="container text-center" style={{width: '30%'}}>
+    <div className="container text-center my-5" style={{width: '30%'}}>
     <img src={product.image} className="w-100" alt={product.name}/>
     <div className="card-body mt-1">
       <h5 className="card-title mt-1">{product.name}</h5>
