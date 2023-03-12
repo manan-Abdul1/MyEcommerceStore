@@ -11,7 +11,7 @@ export default function About() {
           <p className='text-muted'>Thank you for choosing MyEcommerce for your shopping needs. We are dedicated to providing you with the best possible experience and look forward to serving you for years to come.</p>
         </div>
         <div className="col-6">
-          <img className='w-100' src='https://wallpaper.dog/large/984598.jpg' />
+          <img className='w-100' style={{height:'450px'}} src='https://wallpaper.dog/large/984598.jpg' />
         </div>
        </div>
     </div>

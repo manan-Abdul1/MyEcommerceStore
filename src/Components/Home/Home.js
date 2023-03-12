@@ -50,7 +50,7 @@ function Home() {
         </div>
       </div>
       <PopularProducts/>
-      <ProductCategories />
+      {/* <ProductCategories /> */}
     </div>
   );
 }

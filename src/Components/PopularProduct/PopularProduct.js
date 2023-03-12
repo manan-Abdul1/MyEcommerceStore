@@ -13,7 +13,7 @@ export default function PopularProducts() {
       id: 1,
       name: 'Product 1',
       price: 9.99,
-      imageUrl: 'https://wallpaper.dog/large/11038441.jpg'
+      imageUrl: 'https://wallpaper.dog/large/11038440.jpg'
     },
     {
       id: 2,

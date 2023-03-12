@@ -1,9 +1,15 @@
-import { useContext } from 'react';
+import { useContext, useState, useEffect } from 'react';
 import { CartContext } from '../../Context/contextApi';
+import ProductList from '../ProductList/ProductList';
 import './Cart.css';
 
 export default function Cart() {
   const { cart, setCart } = useContext(CartContext);
+  const [total,setTotal] = useState(); 
+
+  useEffect(() => {
+      setTotal(cart.reduce((acc,curr) => acc + curr.price,0));
+  }, [cart])
 
   const handleRemoveItem = (index) => {
     const newCart = [...cart];
@@ -15,10 +21,6 @@ export default function Cart() {
     // Handle checkout logic
   };
 
-  const getTotalPrice = () => {
-    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
-  };
-
   return (
     <div className="container cart-container">
       <h1>Cart</h1>
@@ -26,21 +28,22 @@ export default function Cart() {
         <>
           <p>Total items: {cart.length}</p>
           <ul>
-          {cart.map((item, index) => (
-            <li key={index}>
+            {cart.map((item, index) => (
+              <li key={index}>
                 <div>
-                <img className='w-25 m' src={item.image} alt={item.name} />
-                <span>{item.name}</span>
+                  <img className='w-25' src={item.image} alt={item.name} />
+                  <span>{item.name}</span>
                 </div>
                 <div>
-                <span>{typeof item.price === 'number' ? item.price.toFixed(2) : item.price}</span>
-                <button className='btn-remove' onClick={() => handleRemoveItem(index)}>x</button>
+                  <span>{item.price}</span>
+                  <button className='btn-remove' onClick={() => handleRemoveItem(index)}>x</button>
                 </div>
-            </li>
+              </li>
             ))}
           </ul>
           <div className="total-price">
-            <span>Total Price: ${getTotalPrice().toFixed(2)}</span>
+          <span style={{ display: 'inline-block' }}>Total Price: Rs.{total}</span>
+            {/* <span>Total Price: ${total}</span> */}
           </div>
           <button className="btn btn-warning checkout-btn" onClick={handleCheckout}>
             Checkout

@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
 import ProductList from '../ProductList/ProductList';
 import { CartContext } from '../../Context/contextApi';
+import Filtered from '../FilteredResult/Filtered';
 
 export default function Product() {
   const {products} = useContext(CartContext);
   return (
     <div className="container my-5">
+      <Filtered />
       <div className='row'>
         {
           products.map((product) => (
