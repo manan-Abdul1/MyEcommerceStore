@@ -34,6 +34,7 @@ function Home() {
             </div>
         </div>
       </div>
+      <About/>
       <div className='container home-description'>
         <div className="row">
             <div className="col-6 my-auto text-description">
@@ -50,8 +51,6 @@ function Home() {
       </div>
       <PopularProducts/>
       <ProductCategories />
-      <About/>
-
     </div>
   );
 }

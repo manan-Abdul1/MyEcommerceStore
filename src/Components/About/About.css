@@ -1,6 +1,6 @@
 .about-container {
-    max-width: 800px;
-    margin: 2rem auto;
+    /* max-width: 800px; */
+    margin: 5rem;
     margin-bottom: 130px;
     padding: 2rem;
     background-color: #fff;
@@ -19,4 +19,10 @@
     line-height: 1.5;
     margin-bottom: 1.5rem;
   }
-  
+  .about-container img{
+    border-radius: 10px;
+  }
+  .about-description {
+    padding-left: 20px;
+    text-align: center;
+  }
