@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../../Context/contextApi';
-import './Cart.css'
+import './Cart.css';
+
 export default function Cart() {
   const { cart, setCart } = useContext(CartContext);
 
@@ -14,6 +15,10 @@ export default function Cart() {
     // Handle checkout logic
   };
 
+  const getTotalPrice = () => {
+    return cart.reduce((total, item) => total + item.price * item.quantity, 0);
+  };
+
   return (
     <div className="container cart-container">
       <h1>Cart</h1>
@@ -21,14 +26,25 @@ export default function Cart() {
         <>
           <p>Total items: {cart.length}</p>
           <ul>
-            {cart.map((item, index) => (
-              <li key={index}>
+          {cart.map((item, index) => (
+            <li key={index}>
+                <div>
+                <img className='w-25 m' src={item.image} alt={item.name} />
                 <span>{item.name}</span>
-                <button className='btn btn-danger ms-2' onClick={() => handleRemoveItem(index)}>x</button>
-              </li>
+                </div>
+                <div>
+                <span>{typeof item.price === 'number' ? item.price.toFixed(2) : item.price}</span>
+                <button className='btn-remove' onClick={() => handleRemoveItem(index)}>x</button>
+                </div>
+            </li>
             ))}
           </ul>
-          <button className='checkout-btn' onClick={handleCheckout}>Checkout</button>
+          <div className="total-price">
+            <span>Total Price: ${getTotalPrice().toFixed(2)}</span>
+          </div>
+          <button className="btn btn-warning checkout-btn" onClick={handleCheckout}>
+            Checkout
+          </button>
         </>
       ) : (
         <p>Your cart is empty.</p>

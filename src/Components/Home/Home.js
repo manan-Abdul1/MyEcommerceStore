@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import About from '../About/About';
+import PopularProducts from '../PopularProduct/PopularProduct';
+import ProductCategories from '../ProductCategories/ProductCategories';
 import './Home.css'
 function Home() {
   return (
@@ -45,7 +48,9 @@ function Home() {
             </div>
         </div>
       </div>
-
+      <PopularProducts/>
+      <ProductCategories />
+      <About/>
 
     </div>
   );

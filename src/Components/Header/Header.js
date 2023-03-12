@@ -5,7 +5,7 @@ import './Header.css'
 function Header() {
   const {cart} = useContext(CartContext);
   return (
-    <div className='header bg-dark bg-gradient'>
+    <div className='header bg-dark bg-gradient '>
     <div className="row">
       <div className="col-5">
         <img className='img-logo' src='https://wallpaper.dog/large/20558157.jpg' />
