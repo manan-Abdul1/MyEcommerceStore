@@ -12,7 +12,7 @@ const ProductList = ({ product }) => {
         <img src={product.image} className="card-img-top" alt={product.name} />
         <div className="card-body">
           <h5 className="card-title">{product.name}</h5>
-          <h6 className="card-subtitle mt-2 mb-3 text-muted">${product.price}</h6>
+          <h6 className="card-subtitle mt-2 mb-3 text-muted">Rs.{product.price}</h6>
           <div className="card-subtitle mt-2 mb-3">
             <Rating value={product.rating} />
           </div>

@@ -16,8 +16,29 @@ export default function ContextApi({ children }) {
     };
 });
 
+  // const addItems = (product) => {
+  //   const existingProductIndex = cart.findIndex((idx) => idx.id === product.id );
+  //   if(existingProductIndex !== -1){
+  //       const updatedCart = [...cart];
+  //       updatedCart[existingProductIndex].quantity +=1;
+  //       setCart(updatedCart);
+  //   }
+  //   else{
+  //       setCart([...cart,{...product, quantity: 1}])
+  //   }
+  // };
+
+  // const removeItems = (item) => {
+  //   const updatedCart = cart.filter( i => i.id !== item.id);
+  //   setCart(updatedCart);
+  // };
+  // const clearItems = () => {
+  //     setCart([]);
+  // };
+
+  // const total = cart.reduce((prevVal,currVal) => prevVal + currVal.price, 0);
   return (
-    <CartContext.Provider value={{ products, cart, setCart }}>
+    <CartContext.Provider value={{ products, cart, setCart}}>
       {children}
     </CartContext.Provider>
   );
