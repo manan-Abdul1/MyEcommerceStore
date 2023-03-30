@@ -28,18 +28,3 @@ export default function ProductDetails() {
   </div>
   );
 }
-
-
-
-
-// export default function BlogDetails() {
-//   const { blogIdOrSlug } = useParams();
-//   const [blogPost, setBlogPost] = useState(null);
-
-//   useEffect(() => {
-//     // Make an HTTP request to fetch the blog post data based on `blogIdOrSlug`
-//     fetch(`/api/blogposts/${blogIdOrSlug}`)
-//       .then(response => response.json())
-//       .then(data => setBlogPost(data))
-//       .catch(error => console.error(error));
-//   }, [blogIdOrSlug]);

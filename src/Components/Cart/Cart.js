@@ -56,7 +56,6 @@ export default function Cart() {
           </ul>
           <div className="total-price">
           <span style={{ display: 'inline-block' }}>Total Price: Rs.{total}</span>
-            {/* <span>Total Price: ${total}</span> */}
           </div>
           <button className="btn btn-warning checkout-btn" onClick={handleCheckout}>
             Checkout
